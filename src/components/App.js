@@ -16,12 +16,12 @@ class App extends React.Component {
   }
 
   updateFilter = event => {
-    this.setState(prevState => ({
+    this.setState({
       filters: {
-        ...prevState.filters,
+        ...this.state.filters,
         type: event.target.value
       }
-    }))
+    })
   }
 
   fetchPets = () => {
